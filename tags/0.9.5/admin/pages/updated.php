@@ -1,0 +1,239 @@
+<?php
+	defined('ABSPATH') or die("Direct access to this page is disabled!!!");
+	if ( !current_user_can( 'manage_options' ) && !current_user_can( 'manage_mdjm' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+/*
+* updated.php
+* 12/11/2014
+* since 0.9.3
+* Displays overview of changes in updated version
+*/
+	function f_mdjm_updated_header()	{
+		?>
+        <div class="wrap">
+        <table class="widefat" width="100%">
+        <tr>
+        <td align="center"><img src="<?php echo WPMDJM_PLUGIN_URL . '/admin/images/banner-772x250.png'; ?>" width="772" height="250" /></td>
+        </tr>
+        <tr>
+        <td align="center" style="font-size:24px; font-weight:bold; color:#F90">Welcome to Mobile DJ Manager version <?php echo WPMDJM_VERSION_NUM; ?></td>
+        </tr>
+        </table>
+        <table>
+        <tr>
+        <td>
+        <table class="widefat" width="100%">
+        <tr>
+        <td style="background-color:#F90; font-size:16px; color:#FFF; font-weight:bold">So... What's new?</font></td>
+        </tr>
+        <?php	
+	} // f_mdjm_updated_header
+	
+	function f_mdjm_updated_footer()	{
+		?>
+        <td width="30%" valign="top">
+        <table class="widefat" width="100%">
+        <tr>
+        <td style="background-color:#F90; font-size:16px; color:#FFF; font-weight:bold">Help &amp; Support</td>
+        </tr>
+        <tr>
+        <td><a href="http://mydjplanner.co.uk/support/user-guides/" title="Mobile DJ Manager User Guides" target="_blank">View the User Guides</a></td>
+        </tr>
+        <tr>
+        <td><a href="http://mydjplanner.co.uk/forums/" title="Mobile DJ Manager Support Forums" target="_blank">Visit the Support Forums</a></td>
+        </tr>
+        <tr>
+        <td><a href="http://www.mydjplanner.co.uk/forums/forum/feature-requests/" title="Request New Feature" target="_blank">Request a new Feature</a></td>
+        </tr>
+        </table>
+        </td>
+        </tr>
+        </table>
+        </div>
+        <?php
+	} // f_mdjm_updated_footer
+	
+/**************************************************
+				VERSION 0.9.3
+**************************************************/
+	function f_mdjm_updated_to_0_9_3()	{
+		?>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Email Templates</font><br>
+		Since the first release of MDJM only 4 email templates were available for you to use. Even though these were fully custimisable, it was clear that more were needed so in this version, we changed the way in which we provide templates...<br>
+		From version 0.9.3 templates are managed as posts in the same way in which Contracts have always been managed. A new menu option called <a href="<?php echo admin_url( 'edit.php?post_type=email_template' ); ?>" title="Email Templates">Email Templates</a> has been added.<br>
+		You can now edit existing templates as well as create new templates of your own. Give them a name, add the content, including MDJM shortcodes, and then head over to the all new Scheduler section (also introduced in 0.9.3) to dictate when they are used.<br>
+		Don't worry... we imported the any customisations you may have made to the old email templates but we do recommend you <a href="<?php echo admin_url( 'edit.php?post_type=email_template' ); ?>" title="Email Templates">review them</a> and make sure they are as you left them.</td>
+        </tr>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Scheduler</font><br>
+		Many users have been asking for this for a while now, so we have delivered!<br>
+        Let Mobile DJ Manager manage your business so you don't have to. Whilst you're sleeping, out DJ'ing, spending time with your family, or doing whatever it is you do... Mobile DJ Manager keeps on working;<br />
+        <ui>
+        <li>Request payments from customers</li>
+        <li>Ask clients for feedback once their event is complete</li>
+        <li>Close enquiries that have been outstanding for a while</li>
+        <li>and more</li>
+        </ui>
+        All scheduler tasks can be managed and customised within the <a href="<?php echo admin_url( 'admin.php?page=mdjm-settings&tab=scheduler' ); ?>" title="MDJM Scheduler">Settings</a> page.<br />
+		</td>
+        </tr>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Playlist Uploads</font><br>
+		The setting has been there for a while but it didn't do anything! Now if you enable the Upload Playlists settings
+        option within the <a href="<?php echo admin_url( 'admin.php?page=mdjm-settings' ); ?>" title="MDJM Settings">Settings</a> page, your clients playlist choices will be sent back to the MDJM servers and consolidated with all other Mobile DJ Manager users' playlists. Once our database has been populated with a reasonable amount of data from this information, we'll begin freely sharing with all.<br>
+        You'll be able to see the most popular song choices per month, per year etc.<br />
+        We've turned the Upload Playlists setting on as part of the update.
+		</td>
+        </tr>
+        <tr>
+        <td style="background-color:#F90; font-size:16px; color:#FFF; font-weight:bold">And... What's fixed or improved?</td>
+        </tr>
+        <tr>
+        <td>
+            <ui>
+                <li>This update notice! For all future updates, this page will provide you with an overview of changes</li>
+                <li>Added option to mark balance as paid in event editor view</li>
+                <li>Added Last Login column to the Clients table</li>
+                <li>Added the MDJM menu icon <img src="<?php echo WPMDJM_PLUGIN_URL . '/admin/images/mdjm-icon-20x20.jpg'; ?>" width="20" height="19"> to Contracts &amp; Email Templates menu items to make them easier to identify</li>
+                <li>Dashboard figures were sometimes slightly inaccurate.</li>
+                <li>In event edit view, Update Add-ons button was displayed even if no Add-ons were configured.</li>
+                <li>If no venues had been saved, there was no possibility to enter venue information whilst creating a new event.</li>
+            </ui>
+        </td>
+        </tr>
+        </table>
+        </td>
+        <?php
+	} // f_mdjm_updated_to_0_9_3
+	
+/**************************************************
+				VERSION 0.9.4
+**************************************************/
+	function f_mdjm_updated_to_0_9_4()	{
+		?>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Customised Email Subjects</font><br>
+		You can now configure the client Enquiry, Contract and Booking Confirmation emails to have customised email subjects.<br /><br />
+If you enable the option <strong>Template Title is Subject</strong> within the <a href="<?php echo admin_url( 'admin.php?page=mdjm-settings' ); ?>">DJ Manager > Settings</a> page, these emails will use the title of the templates as the email subject. If the setting remains turned off the default email subjects will be used...<br />
+<ui>
+<li><strong>Event Quote:</strong> DJ Enquiry</li>
+<li><strong>Contract:</strong> Your DJ Booking</li>
+<li><strong>Client Booking Confirmation:</strong> Booking Confirmation</li>
+</ui><br />
+<strong>Note</strong>: The subject of DJ Booking confirmation email which is sent to the event DJ when a client has signed their contract, or an event is set to "Approved" cannot be changed and is set to <strong>DJ Booking Confirmed</strong><br /><br />
+Remember to change the titles of your email templates if you enable this option!<br /><br />
+<strong>Note</strong>: Subjects for emails sent via the scheduler are set within the scheduler. Edit the task and set the subject as required.
+        </td>
+        </tr>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Client Pages</font><br>
+        We have updated the Client Pages to enable your client to login as soon as an enquiry is created and begin managing their event.<br /><br />
+You can now adjust your email template used for sending enquiries to tell your clients about this and enable them to go through the entire booking process, and beyond, easily online.
+		<ui>
+        	<li>Now supports multiple events per client</li>
+            <li>All event's are displayed to client - previously only confirmed (approved events)</li>
+            <li>Clients can accept quotations, sign contracts, decline quotes</li>
+        </ui>
+        </td>
+        </tr>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Default Email Address</font><br>
+		Previously the default email address used to send system generated emails was the email address specified under the WordPress <a href="<?php echo admin_url( 'options-general.php' ); ?>">Settings > General</a> option. We have now introduced a new <strong>Default Email Address</strong> field under the <a href="<?php echo admin_url( 'admin.php?page=mdjm-settings' ); ?>">DJ Manager > Settings</a> page enabling you to change this email address should you wish to do so.<br /><br />
+
+The address specified here is used as the Admin email address. We recommend using the business owner's email address.<br /><br />
+
+If the Setting <strong>Copy Admin in Client Emails</strong> is set, the email address entered in this new field is the one that is copied.<br /><br />
+
+Additionally, in some system generated emails (enquiry etc.) this address is used in the from field. Make sure the address entered is a real mailbox that is capable of receiving emails.
+        </td>
+        </tr>
+        <tr>
+        <td style="background-color:#F90; font-size:16px; color:#FFF; font-weight:bold">And... What's fixed or improved?</td>
+        </tr>
+        <tr>
+        <td>
+            <ui>
+                <li>Early adoptors of 0.9.3 may have experienced issues with saving venues into the venues database during event creation due to an incorrectly set DB attribute</li>
+                <li>Some templated emails were not formatted correctly (too much spacing and/or invalid characters)</li>
+                <li>Admin was not blind copied into emails even if setting was set</li>
+                <li>Client contract page was sometimes denying access if accessed directly</li>
+                <li>Client Playlist page no longer shows odd date if the event has passed</li>
+                <li>Removed the Email Templates tab from the Settings pages as this is no longer used since version 0.9.3</li>
+                <li>Displays the number of playlist entries uploaded to MDJM in the Upload Playlists edit view within the scheduler</li>
+            </ui>
+        </td>
+        </tr>
+        </table>
+        </td>
+        <?php
+	} // f_mdjm_updated_to_0_9_4
+	
+/**************************************************
+				VERSION 0.9.5
+**************************************************/
+	function f_mdjm_updated_to_0_9_5()	{
+		?>
+        <tr>
+        <td>This is a minor update to address some reported bugs, although some slight enhancements are included</td>
+        </tr>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Contract Updates</font><br>
+		<strong>Contract / Invoice Prefix</strong>: Added new option to the <a href="<?php echo admin_url( 'admin.php?page=mdjm-settings' ); ?>">DJ Manager > Settings</a> page enabling you to preifx the unique contracts ID if required. This prefix will also apply to invoices in a future release.
+        </td>
+        </tr>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Shortcode Updates</font><br>
+        We have added a couple of new Event <a href="http://www.mydjplanner.co.uk/shortcodes">Shortcode options</a><br />
+        <ui>
+        <li><span class="code">{CONTRACT_DATE}</span>: Inserts the date of the contract. If the contract has been signed the date of signing is entered, otherwise it defaults to today</li>
+        <li><span class="code">{CONTRACT_ID}</span>: Inserts the unique ID of the contract. If a prefix has been set within <a href="<?php echo admin_url( 'admin.php?page=mdjm-settings' ); ?>">DJ Manager > Settings</a>, the prefix is also displayed</li>
+        </ui>
+        </td>
+        </tr>
+        <tr>
+        <td><font style="font-size:14px; font-weight:bold; color:#F90">Time Formatting</font><br>
+        You can now select how times are displayed. Within the <a href="<?php echo admin_url( 'admin.php?page=mdjm-settings' ); ?>">DJ Manager > Settings</a> page, set to either a 24 hour or 12 hour format
+        </td>
+        </tr>
+        <tr>
+        <td style="background-color:#F90; font-size:16px; color:#FFF; font-weight:bold">And... What's fixed or improved?</td>
+        </tr>
+        <tr>
+        <td>
+            <ui>
+                <li>As reported in <a href="http://www.mydjplanner.co.uk/forums/topic/emails-issues/">this bug</a> the From address of emails was not defaulting back to the WordPress Admin email address if unset</li>
+                <li>Also reported in <a href="http://www.mydjplanner.co.uk/forums/topic/emails-issues/">this bug</a> Admins were copied in client emails even if the setting was not enabled</li>
+                <li>Contract Date was always todays date, even when signed. Now shows date of signature if signed</li>
+                <li>The <strong>Complete Events</strong> scheduled task was sending emails with subject of "0"</li>
+                <li>Some scheduled tasks were sending notification emails to admin even when no actions taken</li>
+            </ui>
+        </td>
+        </tr>
+        </table>
+        </td>
+        <?php
+	} // f_mdjm_updated_to_0_9_5
+	
+	if( isset( $_GET['ver'] ) || isset( $_GET['updated'] ) )	{
+		if( isset( $_GET['updated'] ) && $_GET['updated'] == 1 )	{
+			$func = 'f_mdjm_updated_to_' . str_replace( '.', '_', WPMDJM_VERSION_NUM );
+		}
+		else	{
+			$func = 'f_mdjm_updated_to_' . $_GET['ver'];
+		}
+		if( function_exists( $func ) )	{
+			f_mdjm_updated_header();
+			$func();
+			f_mdjm_updated_footer();
+			update_option( 'mdjm_updated', '0' );
+		}
+		else	{
+			echo '<h2>Page not found</h2>';
+			echo '<a href="' . admin_url( 'admin.php?page=mdjm-dashboard' ) . '">Click here to continue</a>';
+		}
+	}
+	
+	
+?>
