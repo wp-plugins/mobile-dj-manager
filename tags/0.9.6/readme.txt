@@ -1,0 +1,229 @@
+=== Mobile DJ Manager ===
+Contributors: mikeyhoward1977
+Tags: DJ, Mobile DJ, DJ Planning, Event Planning, CRM, Event Planner
+Requires at least: 3.9.1
+Tested up to: 4.0.1
+Stable tag: 0.9.6
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Mobile DJ Manager allows mobile DJ's and businesses to manage their events and employees as well as interact with  their clients easily. 
+
+== Description ==
+
+Mobile DJ Manager is the solution for Mobile DJ's who work on their own or businesses that employ multiple DJ's.
+
+It is an event planning solution built specifically for websites running on WordPress ensuring the users are familiar with the Administration settings and look and feel.
+
+Mobile DJ Manager allows you to manage your events from enquiry stage through to completion. Add your DJ's, your clients and then create an event.
+
+As a site admin you will be able to view all information, but as a DJ, depending on the permissions set by the Administrator, you will only see those events that are specific to you.
+
+Email automation is also built in, depending on your chosen settings. Quotes can be automatically sent to clients when an event is created, contracts can be issued automatically and digitally signed, and booking confirmations also emailed to both clients and DJ's alike.
+
+As a client, you gain access to a number of features via the main website once you login. These include;
+*	Profile management ensuring that the DJ has all the relevant contact details at all times
+*	Playlist management
+*	Invite guests to add songs to the playlist via a unique URL. Clients can remove songs they do not deem appropriate
+
+The main dashboard provides a complete overview of your business detailing the number of events and earnings over the month and year.
+
+All in all Mobile DJ Manager helps you to run your DJ business efficiently.
+
+== Installation ==
+
+Automated Installation
+
+1. Login to your WordPress administration screen and select the "Plugins" -> "Add New" from the menu
+3. Enter "Mobile DJ Manager" into the Search Plugins text box and hit Enter
+4. Click "Install Now" within the Mobile DJ Manager plugin box
+5. Activate the plugin once installation is completed
+
+Manual Installation
+
+Once you have downloaded the plugin zip file, follow these simple instructions to get going;
+
+1. Login to your WordPress administration screen and select the "Plugins" -> "Add New" from the menu
+2. Select "Upload Plugin" from the top of the main page
+3. Click "Choose File" and select the mobile-dj-manager.zip file you downloaded
+4. Click "Install Now"
+5. Once installation has finished, select "Activate Plugin"
+6. Once activation has completed, click the "Settings" link under the Mobile DJ Manager plugin
+7. Installation has now completed. Next you need to <a title="Initial Configuration" href="http://www.mydjplanner.co.uk/initial-configuration/">configure MDJM</a>.
+
+== Frequently Asked Questions ==
+
+= Is any support provided? =
+
+Yes. Support can be obtained via our online Support Forums at http://www.mydjplanner.co.uk/support/ or by emailing contact@mydjplanner.co.uk. We'll answer all queries as quickly as we can.
+
+= Is there a Pro version with additional features? =
+
+This plugin is fully functional and free to use for a period of 30 days after which the ability to adjust settings and add new information is restricted. To list these restrictions, you must purchase a license from http://www.mydjplanner.co.uk
+
+== Screenshots ==
+
+1. An overview fo the Mobile DJ Manager Dashboard screen as seen by an Administrator when they are logged into the WordPress Admin UI
+2. The Dashboard as seen by a DJ (employee) when they are logged in
+3. A view of the settings page (not seen by DJs)
+4. Permissions can be set to determine what a DJ can see/do within the application
+5. Event listing within the Admin UI
+6. The client's homepage on the website front end
+7. The playlist feature as utilised by clients
+
+== Licensing ==
+Mobile DJ Manager for WordPress ships as a 30 day fully functional trial for you to fully experience the benefits of the plugin. 
+After 30 days, functionality will be restricted in that you will no longer be able to add new events, or make adjustments to the plugins settings. After you purchase a license from <a href="http://www.mydjplanner.co.uk" target="_blank">http://www.mydjplanner.co.uk</a> full functionality will be restored.
+Note: It can take up to 24 hours for your new license to be applied and restrictions to be lifted so to ensure you are not impacted, we recommend you purchase your license in advance of the trial expiring.
+
+== Changelog ==
+
+= 0.9.6 =
+<h2>Bug Fixes</h2>
+<ui>
+	<li>As reported in <a href="http://www.mydjplanner.co.uk/forums/topic/error-message/">this bug</a> depending on the PHP configuration of your web server, a warning message may have been displayed when Converting, Completing, Failing, or Recovering and event. This did not affect any functionality</li>
+    <li>The Communication feature was unreliable if a client had multiple events in the system and also regarding copying in Admin/DJ. The overhaul described above addresses these bugs</li>
+</ul>
+
+<h2>New & Enhanced Features</h2>
+<ui>
+	<li>MDJM Shortcodes are supported within email subjects</li>
+	<li>Communication Feature Updated</li>
+	<ul>
+		<li>Admins can now communicate with DJ's as well as all clients in the MDJM system. DJ's can only communicate with their own clients</li>
+		<li>Once you have selected a recipient, you can select the event regarding which you are communicating with them, if you wish to do so. For clients, once selected you can select all events they have in your system. For DJ's, you can select all events at which they have, or will, be DJ'ing at.</li>
+	</ul>
+	<li>Additional fields added to the Event creation and editing process</li>
+	<ul>
+		<li><strong>DJ Setup Time</strong>: Enables you to enter a setup time for the event</li>
+        <li><strong>DJ Setup Date</strong>: Just in case :)</li>
+        <li><strong>DJ Notes</strong>: The ability for you to enter notes that only the Admins and event DJ will see</li>
+        <li><strong>DJ Notes</strong>: The ability for you to enter notes that only the Admins will see</li>
+	</ul>
+	<li>New Shortcodes added to support new event fields</li>
+	<ul>
+        <li><span class="code">{DJ_SETUP_TIME}</span>: Inserts the setup time specified during event creation</li>
+        <li><span class="code">{DJ_SETUP_DATE}</span>: Inserts the setup date specified during event creation</li>
+        <li><span class="code">{DJ_NOTES}</span>: Inserts the information entered into the events DJ Notes field</li>
+        <li><span class="code">{ADMIN_NOTES}</span>: Inserts the information entered into the events Admin Notes field</li>
+	</ul>
+</ul>
+
+= 0.9.5 =
+<h2>Bug Fixes</h2>
+<ul>
+	<li>As reported in <a href="http://www.mydjplanner.co.uk/forums/topic/emails-issues/">this bug</a> the From address of emails was not defaulting back to the WordPress Admin email address if unset</li>
+	<li>Also reported in <a href="http://www.mydjplanner.co.uk/forums/topic/emails-issues/">this bug</a> Admins were copied in client emails even if the setting was not enabled</li>
+    <li>Contract Date was always todays date, even when signed. Now shows date of signature if signed</li>
+	<li>The Complete Events scheduled task was sending emails with subject of "0"</li>
+	<li>Some scheduled tasks were sending notification emails to admin even when no actions taken</li>
+</ul>
+
+<h2>New & Enhanced Features</h2>
+<ul>
+	<li>You can now select how times are displayed. Within the DJ Manager > Settings page, set to either a 24 hour or 12 hour format
+	<li>Added new option to the DJ Manager > Settings page enabling you to preifx the unique contracts ID if required. This prefix will also apply to invoices in a future release.</li>
+	<li>Added shortcode <span class="code">{CONTRACT_DATE}</span>: Inserts the date of the contract. If the contract has been signed the date of signing is entered, otherwise it defaults to today</li>
+    <li>Added shortcode <span class="code">{CONTRACT_ID}</span>: Inserts the unique ID of the contract. If a prefix has been set within <a href="<?php echo admin_url( 'admin.php?page=mdjm-settings' ); ?>">DJ Manager > Settings</a>, the prefix is also displayed</li>
+</ul>
+
+= 0.9.4 =
+<h2>Bug Fixes</h2>
+<ul>
+	<li>Early adoptors of 0.9.3 may have experienced issues with saving venues into the venues database during event creation due to an incorrectly set DB attribute</li>
+	<li>Some templated emails were not formatted correctly (too much spacing and/or invalid characters)</li>
+	<li>Admin was not blind copied into emails even if setting was set</li>
+	<li>Client contract page was sometimes denying access if accessed via direct URL</li>
+	<li>Client Playlist page no longer shows odd date if the event has passed</li>
+	<li>Removed the Email Templates tab from the Settings pages as this is no longer used since version 0.9.3</li>
+	<li>Displays the number of playlist entries uploaded to MDJM in the Upload Playlists edit view of the scheduler</li>
+</ul>
+
+<h2>New & Enhanced Features</h2>
+<ul>
+	<li>Customise the subject of emails for Enquiries, Contracts, and Booking Confirmations</li>
+	<li>Customise the Admin email address</li>
+	<li>Enhanced the Client pages</li>
+	<li>Now supports multiple events per client</li>
+	<li>All event's are displayed to client - previously only confirmed (approved events)</li>
+	<li>Clients can accept quotations, sign contracts, decline quotes</li>
+</ul>
+
+= 0.9.3 =
+<h2>Bug Fixes</h2>
+<ul>
+<li>Occasionally odd characters were appearing in emails generated by the application</li>
+<li>Occasional incorrect figures on the Dashboard have been corrected</li>
+<li>In event edit view, Update Add-ons button was displayed even if no Add-ons were configured.</li>
+<li>If no venues had been saved, there was no possibility to enter venue information whilst creating a new event.</li>
+</ul>
+
+<h2>New & Enhanced Features</h2>
+<ul>
+<li>Email templates are now managed like posts. You can now add your own templates as well as customise the default ones</li>
+<li>Scheduler - Let MDJM work for your business even while you are not!
+<ui>
+<li>Request payments from customers</li>
+<li>Ask clients for feedback once their event is complete</li>
+<li>Close enquiries that have been outstanding for a while</li>
+<li>and more - fully customisable</li>
+</ui>
+</li>
+<li>Added option to mark balance as paid in event editor view</li>
+<li>Added the MDJM menu icon to Contracts &amp; Email Templates menu items to make them easier to identify</li>
+</ul>
+
+= 0.9.2 =
+<ul>
+<li>Bug fix with communication feature - missing info when sending email</li>
+</ul>
+
+= 0.9 =
+* Lots of new features in this release so we have reverted all trials back to 30 days
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed issue with contract page where users could see contract even if not logged in</li>
+<li>Fixed issue DJ not being blind copied in emails when setting is set</li>
+<li>When an event is marked as completed/converted/failed/recovered you are now returned to the event list rather than a blank page with success message</li>
+<li>Some general improvements to browsing/navigation in the Admin UI</li>
+<li>Fixed navigational links in table views</li>
+</ul>
+
+<h2>New & Enhanced Features</h2>
+<ul>
+<li>Added "Mobile DJ Manager" menu items to the Admin toolbar for both frontend and backend when logged in</li>
+<li>Added "Communications" - You can now communicate with clients directly from the MDJM Admin interface</li>
+<li>Equipment packages have been introduced (activate in settings) - Add pre-defined packages to your events</li>
+<li>Inventorise all your equipment</li>
+<li>Add-ons are available for events</li>
+<li>Lost enquiries can now be viewed and recovered</li>
+<li>Enquiry Sources are now fully custmisable</li>
+</ul>
+
+
+= 0.8.1 =
+<ul>
+<li>The warning notice that was sometimes displayed after adding a new event has been resolved</li>
+<li>Bulk action processes are now all working for Events</li>
+<li>Convert, Fail, Cancel links are now functioning correctly</li>
+</ul>
+
+= 0.8 =
+* Added MDJM shortcodes to TinyMCE to be used within email templates
+* Finalised Client Fields settings page
+* Added contracts - contracts are now stored in the application and clients can approved via the frontend
+* Contracts can now be automatically sent to client when enquiries are converted or events status is changed to Pending
+* New email template for client contract notification
+* Added setting feature to auto email client contract
+* Tidied up the install and uninstall procedures
+
+= 0.7.2 =
+* Added ability to view journal entries in the Admin UI
+* New Events are now loaded as Enquiries
+* Plugin update checker is now live
+* Added email templates
+
+== Upgrade Notice ==
+
+= 0.8.1 =
+* This upgrade is required to address some minor bugs
