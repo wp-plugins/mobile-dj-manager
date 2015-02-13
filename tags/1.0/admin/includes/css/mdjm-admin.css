@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*
+* mdjm-admin.css
+* 16/01/2015
+* @since 0.9.9.6
+* Stylesheet for admin pages
+*/
+
+.mdjm-admin-h1-orange {
+	font-size: 24px;
+	font-weight: bold;
+	color: #FF990;
+}
+.mdjm-admin-feature-head	{
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #FF9900;
+}
+.mdjm-dash-block {
+	background-color:#FF9900;
+}
+.mdjm-dash-block-head	{
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.mdjm-dash-block-content	{
+	font-size: 46px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
