@@ -3,7 +3,7 @@ Contributors: mikeyhoward1977
 Tags: DJ, Mobile DJ, DJ Planning, Event Planning, CRM, Event Planner, DJ Event Planner, DJ Agency, DJ Tool, Playlist Management, Contact Forms, Mobile Disco, Disco, Event Management, DJ Manager, Mobile DJ Manager, DJ Management
 Requires at least: 3.9.1
 Tested up to: 4.4
-Stable tag: 1.2.3.5
+Stable tag: 1.2.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,7 +80,7 @@ Note: It can take up to 24 hours for your new license to be applied and restrict
 
 == Changelog ==
 = 1.2.3.6 =
-<strong>Released Sunday 6th September, 2015</strong>
+<strong>Released Friday 4th September, 2015</strong>
 <ul>
 	<li>General: Added custom payment amount option to the PayPal form</li>
 	<li>General: PayPal form now uses radio buttons rather than select list</li>
