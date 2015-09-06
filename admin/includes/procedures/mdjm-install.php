@@ -303,8 +303,9 @@
 							'deposit_label'		  => 'Deposit',
 							'balance_label'		  => 'Balance',
 							'default_type'		   => 'Cash',
-							'form_layout'		 	=> 'horizontal',
-							'payment_label'		  => 'Make a Payment Towards:',
+							'form_layout'		 	=> 'vertical',
+							'payment_label'		  => __( 'Make a Payment Towards', 'mobile-dj-manager' ) . ':',
+							'other_amount_label'	=> __( 'Other Amount', 'mobile-dj-manager' ),
 							'enable_tax'			 => 'N',
 							'tax_type'	   		   => 'percentage',
 							'tax_rate'	   		   => '20',
@@ -316,6 +317,7 @@
 							'redirect_success'	=> 'N',
 							'redirect_cancel'	 => 'N',
 							'paypal_button'	   => 'btn_paynow_SM.gif',
+							'button_text'		=> __( 'Pay Now', 'mobile-dj-manager' ),
 							'enable_sandbox'	  => false,
 							'sandbox_email'  	   => get_bloginfo( 'admin_email' ),
 							'paypal_debug'		=> false,
@@ -450,7 +452,8 @@
 				if( get_option( 'mdjm_is_trial' ) )
 					delete_option( 'mdjm_is_trial' );
 					
-				add_option( 'm_d_j_m_has_initiated', time() );
+				add_option( 'm_d_j_m_has_initiated', current_time( 'timestamp' ) );
+				add_option( 'm_d_j_m_expires', strtotime( '+30 days' ) );
 			}
 			
 			$status['key'] = 'N/A';
